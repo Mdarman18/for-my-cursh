@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Friend</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="heart"></div>
+    <div class="red-heart"></div>
+  </body>
+  <script>
+    const heart = document.querySelector(".heart");
+    const redheart = document.querySelector(".red-heart");
+
+    let audio = new Audio("new.mp3");
+    audio.loop = true;
+
+    heart.addEventListener("click", () => {
+      redheart.classList.add("animation");
+      heart.classList.add("fill-color");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+      fetch("https://source.unsplash.com/1600x900/?romantic")
+        .then((response) => {
+          document.body.style.backgroundImage = `url('${response.url}')`;
+          document.body.style.backgroundSize = "cover";
+          document.body.style.backgroundPosition = "center";
+          document.body.style.backgroundRepeat = "no-repeat";
+        })
+        .catch((error) => console.error("Error fetching image:", error));
+    });
+    redheart.addEventListener("click", () => {
+      redheart.classList.remove("animation");
+      heart.classList.remove("fill-color");
+      document.body.style.backgroundImage = "url('new.jpg')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+  </script>
+</html>
