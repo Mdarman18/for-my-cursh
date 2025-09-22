@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #bc6c25;
+}
+.clock {
+    display: flex; /* Use flexbox to arrange children horizontally */
+    justify-content: center; /* Center the entire clock */
+    align-items: center; /* Vertically align items */
+    /* ... (other existing styles) */
+    background: #dda15e;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(216, 114, 114, 0.2);
+    border: 2px solid rgb(241, 39, 4);
+    overflow: hidden;
+    width: 40%;
+    height: 250px;
+    font-size: 5rem;
+    padding: 20px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 10px; 
+}
+
+.time-unit .hours,
+.time-unit .minutes,
+.time-unit .seconds,
+.time-unit .milliseconds {
+    color: #283618;
+    font-weight: 800;
+    font-size: 8rem;
+    cursor: pointer;
+}
+
+.label {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.separator {
+    color: #606c38;
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+

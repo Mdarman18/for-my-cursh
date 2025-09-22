@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #003049;
+   font-family: 'Times New Roman', Times, serif;
+}
+.box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	background-color:#669bbc;
+	font-size:2rem;
+    width: 50%;
+    height: 60vh;
+    box-shadow:  0 10px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+
+}
+h1 {
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+ 
+}
+
+h1:hover {
+    color: #05f84e; 
+    transform: scale(1.1); 
+}
+
+.inputString{
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    outline: none;
+    margin-bottom: 20px;
+}
+.btn {
+    gap: 60px;
+    justify-content: space-between;
+ 
+
+
+}
+.reset{
+        width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d61a01;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+.checkButton{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.checkButton, .reset {
+  display: inline-block;  
+}
